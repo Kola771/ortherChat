@@ -1,0 +1,31 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chat NodeJs Express
+        script(src="https://cdn.tailwindcss.com")
+    body(class="h-screen flex flex-col")  
+        header(class="flex items-center gap-5 py-3 px-5 bg-cyan-600 text-white shadow-xl sticky top-0 text-[13px]")
+            a(href="/") Node Chat
+            nav
+                ul
+                    li
+                        a(href="/", class="hover:text-gray-700") Accueil
+        
+        main(class="flex-1 overflow-hidden")
+           div(class="flex flex-col md:flex-row h-full") 
+                div(class="bg-gray-800/10 min-w-52")
+                    p #Geoffroy
+                    p #Marcos
+                    p #Silvinoh
+                div(class="flex-1 relative")
+                    p Bienvenue ! 
+                        strong Koladé M. ABOUDOU
+                    
+                    ul
+                        li Les messages apparaîtront ici
+                    form(action="#", method="post", class="absolute bottom-0 left-0 right-0 p-1 bg-gray-800/10 flex gap-4")
+                        input(type="text", name="message", class="outline-none border flex-1 rounded-full pl-4 py-1.5", autofocus, placeholder="Entrez votre message...")
+                        button(type="submit", class="bg-cyan-600 text-white hover:bg-cyan-700 cursor-pointer px-4 rounded") Envoyer

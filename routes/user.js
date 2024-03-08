@@ -14,4 +14,9 @@ router.get("/user/edit", function(req, res) {
     res.end("hello utilisateur 2");
 })
 
+router.post("/", function(req, res) {
+    console.log(req.body);
+    // res.end("hello utilisateur 3");
+})
+
 module.exports = router;
