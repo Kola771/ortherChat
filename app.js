@@ -1,3 +1,4 @@
+require('dotenv').config(); // donne accès aux variables d'environnement
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -6,6 +7,7 @@ const cookieParser = require('cookie-parser');
 
 const indexRouter = require("./routes/index");
 const userRouter = require("./routes/user");
+const authRouter = require("./routes/auth");
 
 // Paramètres de la vue
 // Les vues sont dans le dossiers views
@@ -27,5 +29,6 @@ app.use(cookieParser());
 // Routes
 app.use("/", indexRouter) // On charge toutes les routes se trouvant dans le fichier index.js
 app.use("/user", userRouter) // On charge toutes les routes se trouvant dans le fichier user.js
+app.use("/", authRouter) // On charge toutes les routes se trouvant dans le fichier auth.js
 
 module.exports = app
